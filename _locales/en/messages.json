@@ -8,6 +8,9 @@
   "alwaysUseLatestTweetsLabel": {
     "message": "Use the \"Following\" (chronological) timeline by default"
   },
+  "alwaysUseFirstListTabLabel": {
+    "message": "Use the first list tab by default instead of Following"
+  },
   "appStoreSubtitle": {
     "message": "Take control of your timeline",
     "description": "<= 30 characters"

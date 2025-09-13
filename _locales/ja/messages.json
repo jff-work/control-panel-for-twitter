@@ -8,6 +8,9 @@
   "alwaysUseLatestTweetsLabel": {
     "message": "常にタイムラインを「フォロー中」（時系列順）にする"
   },
+  "alwaysUseFirstListTabLabel": {
+    "message": "フォロー中ではなく最初のリストタブをデフォルトで使用"
+  },
   "appStoreSubtitle": {
     "message": "タイムラインを制御せよ"
   },

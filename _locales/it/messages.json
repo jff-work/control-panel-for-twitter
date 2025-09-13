@@ -8,6 +8,9 @@
   "alwaysUseLatestTweetsLabel": {
     "message": "Usa la timeline \"Seguiti\" (cronologica) di default"
   },
+  "alwaysUseFirstListTabLabel": {
+    "message": "Usa la prima scheda di lista di default invece di Seguiti"
+  },
   "appStoreSubtitle": {
     "message": "La tua timeline, come vuoi tu"
   },

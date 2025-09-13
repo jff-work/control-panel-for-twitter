@@ -8,6 +8,9 @@
   "alwaysUseLatestTweetsLabel": {
     "message": "Utiliser le fil \"Abonnements\" (chronologique) par défaut"
   },
+  "alwaysUseFirstListTabLabel": {
+    "message": "Utiliser le premier onglet de liste par défaut au lieu d'Abonnements"
+  },
   "appStoreSubtitle": {
     "message": "Contrôlez votre fil"
   },

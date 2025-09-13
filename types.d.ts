@@ -7,6 +7,8 @@ export type Config = {
   addAddMutedWordMenuItem: boolean
   // XXX This is now more like "use the Following tab by default"
   alwaysUseLatestTweets: boolean
+  // Use the first list tab by default instead of Following
+  alwaysUseFirstListTab: boolean
   bypassAgeVerification: boolean
   defaultToLatestSearch: boolean
   disableHomeTimeline: boolean

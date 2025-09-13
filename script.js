@@ -61,6 +61,7 @@ const config = {
   // Shared
   addAddMutedWordMenuItem: true,
   alwaysUseLatestTweets: true,
+  alwaysUseFirstListTab: false,
   bypassAgeVerification: true,
   defaultToLatestSearch: false,
   disableHomeTimeline: false,
@@ -3674,7 +3675,7 @@ const configureCss = (() => {
       .cpft_menu_item:hover { background-color: var(--hover-bg-color) !important; }
     `)
 
-    if (config.alwaysUseLatestTweets && config.hideForYouTimeline) {
+    if ((config.alwaysUseLatestTweets && config.hideForYouTimeline) || config.alwaysUseFirstListTab) {
       cssRules.push(`
         /* Prevent the For you tab container taking up space */
         body.HomeTimeline nav.TimelineTabs div[role="tablist"] > div:first-child {
@@ -6828,10 +6829,17 @@ async function tweakMobileMediaViewerPage() {
 async function tweakTimelineTabs($timelineTabs) {
   $timelineTabs.classList.add('TimelineTabs')
   let $followingTabLink = /** @type {HTMLElement} */ ($timelineTabs.querySelector('div[role="tablist"] > div:nth-child(2) > a'))
+  let $firstListTabLink = /** @type {HTMLElement} */ ($timelineTabs.querySelector('div[role="tablist"] > div:nth-child(3) > a'))
 
-  if (config.alwaysUseLatestTweets && !document.title.startsWith(separatedTweetsTimelineTitle)) {
+  if (!document.title.startsWith(separatedTweetsTimelineTitle)) {
     let isForYouTabSelected = Boolean($timelineTabs.querySelector('div[role="tablist"] > div:first-child > a[aria-selected="true"]'))
-    if (isForYouTabSelected && (!wasForYouTabSelected || config.hideForYouTimeline)) {
+    let isFollowingTabSelected = Boolean($timelineTabs.querySelector('div[role="tablist"] > div:nth-child(2) > a[aria-selected="true"]'))
+    
+    if (config.alwaysUseFirstListTab && (isForYouTabSelected || isFollowingTabSelected) && $firstListTabLink) {
+      log('switching to first list tab')
+      $firstListTabLink.click()
+      wasForYouTabSelected = false
+    } else if (config.alwaysUseLatestTweets && isForYouTabSelected && (!wasForYouTabSelected || config.hideForYouTimeline)) {
       log('switching to Following timeline')
       $followingTabLink.click()
       wasForYouTabSelected = false

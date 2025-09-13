@@ -33,6 +33,7 @@ for (let translationId of [
   'addAddMutedWordMenuItemLabel_desktop',
   'addAddMutedWordMenuItemLabel_mobile',
   'alwaysUseLatestTweetsLabel',
+  'alwaysUseFirstListTabLabel',
   'bypassAgeVerificationLabel',
   'customCssLabel',
   'debugInfo',
@@ -188,7 +189,8 @@ const defaultConfig = {
   version: /(Android|iP(ad|hone))/.test(navigator.userAgent) ? 'mobile' : 'desktop',
   // Shared
   addAddMutedWordMenuItem: true,
-  alwaysUseLatestTweets: true,
+  alwaysUseLatestTweets: false,
+  alwaysUseFirstListTab: true,
   bypassAgeVerification: true,
   defaultToLatestSearch: false,
   disableHomeTimeline: false,

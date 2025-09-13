@@ -8,6 +8,9 @@
   "alwaysUseLatestTweetsLabel": {
     "message": "Usar la timeline cronológica (Siguiendo) por defecto"
   },
+  "alwaysUseFirstListTabLabel": {
+    "message": "Usar la primera pestaña de lista por defecto en lugar de Siguiendo"
+  },
   "appStoreSubtitle": {
     "message": "Controla tu línea de tiempo"
   },

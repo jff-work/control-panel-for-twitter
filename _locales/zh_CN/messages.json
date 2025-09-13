@@ -8,6 +8,9 @@
   "alwaysUseLatestTweetsLabel": {
     "message": "默认使用 \"正在关注\"（按时间顺序）的时间线"
   },
+  "alwaysUseFirstListTabLabel": {
+    "message": "默认使用第一个列表标签页而不是正在关注"
+  },
   "appStoreSubtitle": {
     "message": "掌控你的时间线"
   },
