@@ -61,7 +61,7 @@ const config = {
   // Shared
   addAddMutedWordMenuItem: true,
   alwaysUseLatestTweets: true,
-  alwaysUseFirstListTab: false,
+  alwaysUseFirstListTab: true,
   bypassAgeVerification: true,
   defaultToLatestSearch: false,
   disableHomeTimeline: false,
@@ -3675,7 +3675,7 @@ const configureCss = (() => {
       .cpft_menu_item:hover { background-color: var(--hover-bg-color) !important; }
     `)
 
-    if ((config.alwaysUseLatestTweets && config.hideForYouTimeline) || config.alwaysUseFirstListTab) {
+    if ((config.alwaysUseLatestTweets && config.hideForYouTimeline) || (config.alwaysUseFirstListTab && config.hideForYouTimeline)) {
       cssRules.push(`
         /* Prevent the For you tab container taking up space */
         body.HomeTimeline nav.TimelineTabs div[role="tablist"] > div:first-child {

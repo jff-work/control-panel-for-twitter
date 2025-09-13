@@ -475,6 +475,7 @@ function updateCheckboxGroups() {
 function updateDisplay() {
   $body.classList.toggle('debugging', optionsConfig.debug)
   $body.classList.toggle('chronological', optionsConfig.alwaysUseLatestTweets)
+  $body.classList.toggle('showHideForYouOption', optionsConfig.alwaysUseLatestTweets || optionsConfig.alwaysUseFirstListTab)
   $body.classList.toggle('disabled', !optionsConfig.enabled)
   $body.classList.toggle('disabledHomeTimeline', optionsConfig.disableHomeTimeline)
   $body.classList.toggle('fullWidthContent', optionsConfig.fullWidthContent)
